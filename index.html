@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png"/>
+    <title>Xavier Cooney</title>
+<style>
+    * {
+        box-sizing: border-box;
+        font-variant-numeric: tabular-nums;
+    }
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 100%;
+        margin: 0px;
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: #DDD;
+    }
+    h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+    .main-row {
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        align-items: flex-start;
+    }
+    @media only screen and (max-width: 700px) {
+        .main-row {
+            flex-wrap: wrap;
+        }
+    }
+    .main-row img {
+        flex-shrink: 3;
+        max-width: 300px;
+        display: block;
+    }
+    .main-row .explanation {
+        flex-grow: 3;
+        padding: 20px;
+    }
+    .main-row .explanation h2 {
+        text-align: center;
+    }
+    .main-row h2 a {
+        color: #555;
+    }
+    [data-fadein] {
+        opacity: 0%; /* Stop flashing before the fade-ins have opeacity set to 0 by JS */
+    }
+</style>
+</head>
+<body>
+    <h1 data-fadein="0.2" data-fadein_duration="1.0">Xavier Cooney</h1>
+    <p data-fadein="0.5" data-fadein_duration="1.5">
+        This is a list of some of things that I've made which are online. Hopefully some of them will be
+        interesting/useful. &mdash; Xavier
+    </p>
+    <div class="main-row" style="background-color: #FFFFFF;" data-fadein="1.5" data-fadein_duration="0.8">
+        <a href="https://xaviercooney.github.io/logic/" target="_blank">
+            <img src="logic-screenshot.png"  data-fadein="2.5" data-fadein_duration="1.2">
+        </a>
+        <div class="explanation" data-fadein="2.8" data-fadein_duration="1.2">
+            <h2 data-fadein="2.1" data-fadein_duration="1.2"><a href="https://xaviercooney.github.io/logic/" target="_blank">Propositional Logic Analyser</a></h2>
+            <div data-fadein="2.8" data-fadein_duration="1.2">
+                <p>
+                    This online tool was originally designed for a school philosophy class when
+                    we were discussing the concept of logic. The system models
+                    <a href="https://en.wikipedia.org/wiki/Propositional_calculus">propositional calculus (or zeroth-order logic)</a>
+                    by constructing a truth table for every valuation.
+                </p>
+                <p>
+                    To do this, I wrote a recursive descent parser (with operator precedence) which transforms the various expressions
+                    (all the premises and the conclusion) into an abstract syntax tree, which is then evaluated
+                    for every row in the virtual truth table.
+                </p>
+                <p>
+                    The tool also includes 28 examples which can be loaded with the click of the button, including
+                    various common axioms used to form logical systems, as well as formal fallacies. Furthermore, the site
+                    contains the ability to save and share a given logical system by encoding it in the URL.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="main-row" style="background-color: #FFFFFF;" data-fadein="2" data-fadein_duration="0.8">
+        <div class="explanation" data-fadein="2.8" data-fadein_duration="1.2">
+            <h2>
+                <a href="https://xaviercooney.github.io/sort-visualiser/" target="_blank">Sorting Algorithm Visualiser</a>
+            </h2>
+            <p>
+                When our Software Design & Development class was learning about sorting algorithms, I
+                created a sorting visualiser to aid learning. Although there are a number of online tools
+                and YouTube videos which show sorting algorithms in a similar manner, this tool
+                is specifically designed for assisting in understanding the algorithms. The actually sorting
+                is performed by an interpreter for a pseudocode-like language, similar to that of the
+                <a href="https://educationstandards.nsw.edu.au/wps/wcm/connect/44325629-51c6-4330-8bf8-662d5cfbe5fb/software-design-development-course-specs.pdf?MOD=AJPERES&CVID=#page=35">NSW Education Standard Authority</a>.
+                This allows students to step through the program written in a manner in which they are learning,
+                line by line, while they can see the state of the array-to-be-sorted, as well as all the variables. For
+                each integer variable, the user can select for that variable to be visualised as an index into the array,
+                which proved to be very useful.
+            </p>
+            <p>
+                As well as the three NESA specified sorting algorithms of insertion sort, bubble sort and selection sort, the
+                tool also has pseudocode-like implementations of a variety of other sorts, including quicksort, heapsort,
+                shellsort, and other more esoteric algorithms.
+            </p>
+        </div>
+        <a href="https://xaviercooney.github.io/sort-visualiser/" target="_blank">
+            <img src="sort-screenshot.png" data-fadein="2.5" data-fadein_duration="1.2">
+        </a>
+    </div>
+    <div class="main-row" style="background-color: #FFFFFF;" data-fadein="2" data-fadein_duration="0.8">
+        <a href="https://xaviercooney.github.io/equilibrium-visualise/" target="_blank">
+            <img src="equilibrium-screenshot.png" data-fadein="2.5" data-fadein_duration="1.2">
+            <hr data-fadein="5" data-fadein_duration="1.2">
+            <img src="equilibrium-screenshot-2.png" data-fadein="2.5" data-fadein_duration="1.2">
+        </a>
+        <div class="explanation" data-fadein="2.8" data-fadein_duration="1.2">
+            <h2>
+                <a href="https://xaviercooney.github.io/equilibrium-visualise/" target="_blank">
+                    Chemical Reaction Equilibria Visualiser
+                </a>
+            </h2>
+            <p>
+                Chemical equilibria are an important concept in chemistry, particularly in the
+                year 12 chemistry NESA syllabus. Thus, when I my class began learning about equilibriums,
+                I created this online tool. I found that the development of this tool greatly assisted my understanding
+                of the topic. The visualiser has a number of options and buttons, but it's main purpose is to
+                simulate an equilibrium between 'red particles' and 'blue particles'. The blue particles will 'react' to red,
+                and the red to blue based on the equilbrium constant, K<sub>eq</sub>, selected by the user. Users can then
+                observe the reaction occuring, as the blue particles 'swap' to the red side and vice versa. Users
+                can then quantitatively analyse the state of the system, both with numeric displays and with the automatic
+                graph. The tool is highly interactive, allowing particles to be added or removed, the reaction rate
+                and equilibrium constant to be changed, and the graph and other parameters to be altered, all while the simulation
+                is running.
+            </p>
+            <p>
+                The simulation can run probabilistically, using the
+                <a href="https://en.wikipedia.org/wiki/Poisson_distribution">Poisson distribution</a>, or just based on
+                the expected amount of reaction, with rounding corrected for. The former is a truer represtentation of how
+                the specific set of particles would look like in equilbrium, while the latter allows for far larger systems
+                (which are much more relevant to the systems studied in chemistry) to be simulated and examined.
+            </p>
+        </div>
+    </div>
+    <div class="main-row" style="background-color: #FFFFFF;" data-fadein="2" data-fadein_duration="0.8">
+        <div class="explanation">
+            <h2>
+                <a href="https://xaviercooney.github.io/motor-sim/" target="_blank">Physics Motor Simulator</a>
+            </h2>
+            <p>
+                When my year 12 physics class were learning about how the motor effect can be used to create useful rotation,
+                I decided to see if I could use the equations we had learnt and create an actually physically accurate simulation.
+                Doing so purely algebricallly is non-trivial, but by using numeric integration, this tool allows users
+                to simulate the motor effect to a moderately to high degree of physical accuracy.
+            </p>
+            <p>
+                The tool allows for extensive phyiscal parameter configuration, from the length of the conductor to the
+                strength of the external magnetic field. Users can also select a 'control system', to simulate the commutator
+                on brushed DC motors, as well as other situations. For more information on the details of the simulation,
+                check out the information box at the bottom of the simulator page.
+            </p>
+        </div>
+        <a href="https://xaviercooney.github.io/motor-sim/" target="_blank">
+            <img src="motor-screenshot.png" data-fadein="2.5" data-fadein_duration="1.2">
+        </a>
+    </div>
+    <div class="main-row">
+        <h2>And even more, which is coming soon!</h2>
+    </div>
+<script>
+let xav = String.raw`
+\    /      /\  \          /
+ \  /      /  \  \        / 
+  \/      /    \  \      /  
+  /\     /------\  \    /   
+ /  \   /        \  \  /    
+/    \ /          \  \/     
+`.trim();
+let css = "text-shadow: -1px -1px #F00, 1px 1px #0F0, 2px 2px #00F; size: 20px";
+
+console.log("%c" + xav, css);
+</script>
+<script>
+let all_fade_ins = document.querySelectorAll('[data-fadein]');
+for(let fade_in of all_fade_ins) {
+    fade_in.style.opacity = '0%';
+    setTimeout(() => {
+        let duration = (Number.parseFloat(fade_in.dataset.fadein_duration) || 2.5) * 1000;
+        let fade_in_start = +(new Date());
+
+        let total = 0;
+
+        function do_fade() {
+            let elapsed = +(new Date()) - fade_in_start;
+
+            fade_in.style.opacity = `${Math.floor(Math.min(elapsed / duration * 100, 100))}%`;
+            total++;
+            if(elapsed < duration) {
+                requestAnimationFrame(do_fade);
+            } else {
+                console.log(total);
+                fade_in.style.opacity = '100%';
+            }
+        }
+        do_fade();
+    }, Number.parseFloat(fade_in.dataset.fadein) * 1000);
+}
+</script>
+</body>
+</html>
